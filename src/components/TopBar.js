@@ -3,20 +3,20 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
-import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import {FILTER_EVENT} from "../reducers";
-import {useDispatch} from 'react-redux'
-import {filterEventAction} from "../actions"
+import {useDispatch} from 'react-redux';
+import {filterEventAction} from "../actions";
+import DateFnsUtils from '@date-io/date-fns';
+import { MuiPickersUtilsProvider, DatePicker, d} from '@material-ui/pickers';
+
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -56,17 +56,11 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
     },
     inputRoot: {
-        color: 'inherit',
+        color: 'white'
     },
     inputInput: {
-        padding: theme.spacing(1, 1, 1, 0),
-        // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-        transition: theme.transitions.create('width'),
-        width: '100%',
-        [theme.breakpoints.up('md')]: {
-            width: '20ch',
-        },
+        color:'white !important'
     },
     sectionDesktop: {
         display: 'none',
@@ -85,6 +79,7 @@ const useStyles = makeStyles((theme) => ({
 export default function TopBar() {
     const dispatch = useDispatch()
     const classes = useStyles();
+    const [eventDate, setEventDate] = React.useState(null);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -182,6 +177,25 @@ export default function TopBar() {
                             inputProps={{ 'aria-label': 'search' }}
                             onChange={event => dispatch(filterEventAction(event.target.value))}
                         />
+
+                    </div>
+                    <div className={classes.search}>
+                        <div className={classes.searchIcon}>
+                            <SearchIcon />
+                        </div>
+                        <MuiPickersUtilsProvider utils={DateFnsUtils} style={{padding:"0 !important"}} >
+                            <DatePicker
+                                placeholder="Data do evento"
+                                format="dd/MM/yyyy"
+                                views={["year", "month", "date"]}
+                                value={eventDate}
+                                onChange={e => setEventDate(e)}
+
+                                animateYearScrolling
+                                InputProps={{ className: classes.inputInput }}
+                            />
+
+                        </MuiPickersUtilsProvider>
                     </div>
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
