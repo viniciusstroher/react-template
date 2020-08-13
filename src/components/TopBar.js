@@ -185,6 +185,7 @@ export default function TopBar() {
                         </div>
                         <MuiPickersUtilsProvider utils={DateFnsUtils} style={{padding:"0 !important"}} >
                             <DatePicker
+
                                 placeholder="Data do evento"
                                 format="dd/MM/yyyy"
                                 views={["year", "month", "date"]}
@@ -192,7 +193,7 @@ export default function TopBar() {
                                 onChange={e => setEventDate(e)}
 
                                 animateYearScrolling
-                                InputProps={{ className: classes.inputInput }}
+                                InputProps={{ className: classes.inputInput, disableUnderline:true }}
                             />
 
                         </MuiPickersUtilsProvider>
