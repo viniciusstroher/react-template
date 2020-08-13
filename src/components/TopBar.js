@@ -16,7 +16,9 @@ import {useDispatch} from 'react-redux';
 import {filterEventAction} from "../actions";
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, DatePicker, d} from '@material-ui/pickers';
-
+import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
+import {ptBR} from "@material-ui/core/locale";
+import ClearIcon from '@material-ui/icons/Clear';
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -181,21 +183,27 @@ export default function TopBar() {
                     </div>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>
-                            <SearchIcon />
+                            <CalendarTodayIcon />
                         </div>
                         <MuiPickersUtilsProvider utils={DateFnsUtils} style={{padding:"0 !important"}} >
                             <DatePicker
-
                                 placeholder="Data do evento"
                                 format="dd/MM/yyyy"
                                 views={["year", "month", "date"]}
                                 value={eventDate}
                                 onChange={e => setEventDate(e)}
-
                                 animateYearScrolling
                                 InputProps={{ className: classes.inputInput, disableUnderline:true }}
                             />
-
+                            <IconButton
+                                // style={{ padding: 0 }}
+                                edge="end"
+                                size="small"
+                                disabled={!eventDate}
+                                onClick={() => setEventDate(null)}
+                            >
+                                <ClearIcon />
+                            </IconButton>
                         </MuiPickersUtilsProvider>
                     </div>
                     <div className={classes.grow} />
