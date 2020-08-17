@@ -50,8 +50,8 @@ function ListEventsPage() {
     const eventsFilter = useSelector(state => state.eventsReducer.eventsFilter)
 
     const enterEventDetail  = (event) => {
-        const pathname = `/events/${event.id}`
-        history.push({pathname, state: {id: event.id} })
+        const pathName = `/events/${event.id}`
+        history.push(pathName,  {id: event.id} )
     }
 
     return ( //6-desk - 4 mob
