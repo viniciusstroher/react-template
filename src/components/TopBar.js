@@ -172,7 +172,6 @@ export default function TopBar(props) {
 
     return (
         <div className={classes.grow}>
-            {props.hideEventFilter}
             <AppBar position="static">
                 <Toolbar>
 
@@ -198,7 +197,7 @@ export default function TopBar(props) {
                                 edge="end"
                                 size="small"
                                 disabled={eventFilter === ''}
-                                onClick={() => event => setEventFilter('')}
+                                onClick={() => setEventFilter('')}
                             >
                                 <ClearIcon />
                             </IconButton>
