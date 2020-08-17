@@ -1,5 +1,5 @@
 import React from 'react';
-import {GridList,GridListTile,GridListTileBar,IconButton,Card,CardContent} from '@material-ui/core'
+import {GridList,GridListTile,GridListTileBar,IconButton,Card,CardContent,Paper} from '@material-ui/core'
 import {makeStyles} from "@material-ui/core/styles";
 import DirectionsBikeIcon from '@material-ui/icons/DirectionsBike';
 import InfoIcon from '@material-ui/icons/Info';
@@ -58,7 +58,9 @@ function ListEventsPage() {
         <>
             <TopBar hideEventFilter={false}/>
             {eventsFilter.length == 0 ?
-                <div>Sem registros</div>
+                <Paper elevation={3} style={{height:"50vh",textAlign:"center",verticalAlign: "middle", display:"table-cell",width: "100vw"}}>
+                    Sem registros
+                </Paper>
             :
                 <GridList cellHeight={200} spacing={30} className={classes.gridList} cols={4}>
                     {eventsFilter.map((event) => (

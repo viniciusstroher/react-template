@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="feec0bb9-3943-4458-8cdc-820869f2f3c0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TopBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ListEventsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ListEventsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,7 @@
       <workItem from="1597187697897" duration="5068000" />
       <workItem from="1597282084581" duration="9005000" />
       <workItem from="1597361308388" duration="1549000" />
-      <workItem from="1597590829023" duration="10918000" />
+      <workItem from="1597590829023" duration="13032000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1597198267532</created>
@@ -114,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597622605450</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="first">
+      <created>1597629035602</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1597629035602</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,9 +149,9 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="336" y="162" key="run.anything.popup/0.0.1360.728@0.0.1360.728" timestamp="1596594176005" />
-    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1596592627899">
+    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597630527403">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1596592627899" />
+    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1597630527403" />
   </component>
 </project>

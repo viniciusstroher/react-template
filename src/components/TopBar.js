@@ -12,7 +12,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {filterEventAction} from "../actions";
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, DatePicker, d} from '@material-ui/pickers';
@@ -81,6 +81,8 @@ const useStyles = makeStyles((theme) => ({
 export default function TopBar(props = {hideEventFilter:true}) {
     const dispatch = useDispatch()
     const classes = useStyles();
+    const filter = useSelector(state => state.eventsReducer.filter)
+
     const [eventDate, setEventDate] = React.useState(null);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -179,8 +181,18 @@ export default function TopBar(props = {hideEventFilter:true}) {
                                 }}
                                 inputProps={{ 'aria-label': 'search' }}
                                 onChange={event => dispatch(filterEventAction(event.target.value))}
+
                             />
 
+                            <IconButton
+                                // style={{ padding: 0 }}
+                                edge="end"
+                                size="small"
+                                disabled={filter === ''}
+                                onClick={() => event => dispatch(filterEventAction(null))}
+                            >
+                                <ClearIcon />
+                            </IconButton>
                         </div>
                         <div className={classes.search} style={{padding:"5px", margin:"5px", width:"100%"}}>
                             <div className={classes.searchIcon}>
