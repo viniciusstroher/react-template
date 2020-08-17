@@ -4,16 +4,15 @@ import './App.css';
 import {Router, Route, Switch} from 'react-router'
 import {HashRouter} from 'react-router-dom'
 import ListEventsPage from './pages/ListEventsPage'
-
+import DetailEventsPage from './pages/DetailEventsPage'
 function App() {
     return (
     <div className="App" style={{/*display:"flex",justifyContent:"center"*/}}>
       <div style={{/*width:"80%"*/}}>
           <HashRouter>
               <Switch>
-                  <Route path="/events">
-                      <ListEventsPage/>
-                  </Route>
+                  <Route path="/events" component={ListEventsPage} />
+                  <Route path="/events/:id" component={DetailEventsPage} />
                   <Route path="/topics">
                       tops
                   </Route>

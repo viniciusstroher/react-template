@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="feec0bb9-3943-4458-8cdc-820869f2f3c0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/DetailEventsPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TopBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/ListEventsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ListEventsPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,11 +34,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WebstormProjects\girinex_app\src\pages" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
@@ -69,6 +78,8 @@
       <workItem from="1597110764849" duration="1744000" />
       <workItem from="1597187697897" duration="5068000" />
       <workItem from="1597282084581" duration="9005000" />
+      <workItem from="1597361308388" duration="1549000" />
+      <workItem from="1597590829023" duration="9312000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1597198267532</created>
@@ -109,14 +120,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="first" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1597291526863">
+    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1597622597929">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1597291526863" />
-    <state x="272" y="97" key="Vcs.Push.Dialog.v2" timestamp="1597291529558">
+    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1597622597929" />
+    <state x="272" y="97" key="Vcs.Push.Dialog.v2" timestamp="1597622600189">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="272" y="97" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1597291529558" />
+    <state x="272" y="97" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1597622600189" />
     <state x="489" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596508840644">
       <screen x="0" y="0" width="1360" height="728" />
     </state>

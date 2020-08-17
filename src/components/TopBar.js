@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function TopBar() {
+export default function TopBar(props = {hideEventFilter:true}) {
     const dispatch = useDispatch()
     const classes = useStyles();
     const [eventDate, setEventDate] = React.useState(null);
@@ -166,66 +166,57 @@ export default function TopBar() {
         <div className={classes.grow}>
             <AppBar position="static">
                 <Toolbar>
-                    <div className={classes.search}>
-                        <div className={classes.searchIcon}>
-                            <SearchIcon />
-                        </div>
-                        <InputBase
-                            placeholder="Pesquisar por evento"
-                            classes={{
-                                root: classes.inputRoot,
-                                input: classes.inputInput,
-                            }}
-                            inputProps={{ 'aria-label': 'search' }}
-                            onChange={event => dispatch(filterEventAction(event.target.value))}
-                        />
-
-                    </div>
-                    <div className={classes.search}>
-                        <div className={classes.searchIcon}>
-                            <CalendarTodayIcon />
-                        </div>
-                        <MuiPickersUtilsProvider utils={DateFnsUtils} style={{padding:"0 !important"}} >
-                            <DatePicker
-                                placeholder="Data do evento"
-                                format="dd/MM/yyyy"
-                                views={["year", "month", "date"]}
-                                value={eventDate}
-                                onChange={e => setEventDate(e)}
-                                animateYearScrolling
-                                InputProps={{ className: classes.inputInput, disableUnderline:true }}
+                    <div style={{padding:"5px",margin:"5px"}}>
+                        <div className={classes.search} style={{padding:"5px",margin:"5px", width:"100%"}}>
+                            <div className={classes.searchIcon}>
+                                <SearchIcon />
+                            </div>
+                            <InputBase
+                                placeholder="Pesquisar por evento"
+                                classes={{
+                                    root: classes.inputRoot,
+                                    input: classes.inputInput,
+                                }}
+                                inputProps={{ 'aria-label': 'search' }}
+                                onChange={event => dispatch(filterEventAction(event.target.value))}
                             />
-                            <IconButton
-                                // style={{ padding: 0 }}
-                                edge="end"
-                                size="small"
-                                disabled={!eventDate}
-                                onClick={() => setEventDate(null)}
-                            >
-                                <ClearIcon />
-                            </IconButton>
-                        </MuiPickersUtilsProvider>
+
+                        </div>
+                        <div className={classes.search} style={{padding:"5px", margin:"5px", width:"100%"}}>
+                            <div className={classes.searchIcon}>
+                                <CalendarTodayIcon />
+                            </div>
+                            <MuiPickersUtilsProvider utils={DateFnsUtils} style={{padding:"0 !important"}} >
+                                <DatePicker
+                                    placeholder="Data do evento"
+                                    format="dd/MM/yyyy"
+                                    views={["year", "month", "date"]}
+                                    value={eventDate}
+                                    onChange={e => setEventDate(e)}
+                                    animateYearScrolling
+                                    InputProps={{ className: classes.inputInput, disableUnderline:true }}
+                                />
+                                <IconButton
+                                    // style={{ padding: 0 }}
+                                    edge="end"
+                                    size="small"
+                                    disabled={!eventDate}
+                                    onClick={() => setEventDate(null)}
+                                >
+                                    <ClearIcon />
+                                </IconButton>
+                            </MuiPickersUtilsProvider>
+                        </div>
                     </div>
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
-                        <IconButton aria-label="show 4 new mails" color="inherit">
-                            <Badge badgeContent={4} color="secondary">
-                                <MailIcon />
-                            </Badge>
-                        </IconButton>
-                        <IconButton aria-label="show 17 new notifications" color="inherit">
-                            <Badge badgeContent={17} color="secondary">
-                                <NotificationsIcon />
-                            </Badge>
-                        </IconButton>
                         <IconButton
                             edge="end"
                             aria-label="account of current user"
                             aria-controls={menuId}
                             aria-haspopup="true"
                             onClick={handleProfileMenuOpen}
-                            color="inherit"
-                        >
+                            color="inherit" >
                             <AccountCircle />
                         </IconButton>
                     </div>
@@ -241,6 +232,7 @@ export default function TopBar() {
                         </IconButton>
                     </div>
                 </Toolbar>
+
             </AppBar>
             {renderMobileMenu}
             {renderMenu}
