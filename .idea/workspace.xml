@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="feec0bb9-3943-4458-8cdc-820869f2f3c0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/TopBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TopBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/ListEventsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/ListEventsPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
@@ -78,7 +79,7 @@
       <workItem from="1597187697897" duration="5068000" />
       <workItem from="1597282084581" duration="9005000" />
       <workItem from="1597361308388" duration="1549000" />
-      <workItem from="1597590829023" duration="13032000" />
+      <workItem from="1597590829023" duration="15718000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1597198267532</created>
@@ -122,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597629035602</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="first">
+      <created>1597631160201</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1597631160201</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,22 +141,22 @@
     <option name="LAST_COMMIT_MESSAGE" value="first" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1597629021942">
+    <state x="305" y="0" key="CommitChangelistDialog2" timestamp="1597631156541">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1597629021942" />
-    <state x="272" y="97" key="Vcs.Push.Dialog.v2" timestamp="1597629024836">
+    <state x="305" y="0" key="CommitChangelistDialog2/0.0.1360.728@0.0.1360.728" timestamp="1597631156541" />
+    <state x="272" y="97" key="Vcs.Push.Dialog.v2" timestamp="1597631158575">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="272" y="97" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1597629024836" />
+    <state x="272" y="97" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1597631158575" />
     <state x="489" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596508840644">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="489" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1360.728@0.0.1360.728" timestamp="1596508840644" />
-    <state x="336" y="162" key="run.anything.popup" timestamp="1596594176005">
+    <state x="336" y="162" key="run.anything.popup" timestamp="1597633130206">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="336" y="162" key="run.anything.popup/0.0.1360.728@0.0.1360.728" timestamp="1596594176005" />
+    <state x="336" y="162" key="run.anything.popup/0.0.1360.728@0.0.1360.728" timestamp="1597633130206" />
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1597630527403">
       <screen x="0" y="0" width="1360" height="728" />
     </state>

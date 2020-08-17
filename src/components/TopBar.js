@@ -3,6 +3,7 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
+import Button from '@material-ui/core/Button';
 import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -78,11 +79,16 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function TopBar(props = {hideEventFilter:true}) {
+TopBar.defaultProps = {
+    hideEventFilter: true
+}
+
+
+export default function TopBar(props) {
     const dispatch = useDispatch()
     const classes = useStyles();
-    const filter = useSelector(state => state.eventsReducer.filter)
 
+    const [eventFilter, setEventFilter] = React.useState('');
     const [eventDate, setEventDate] = React.useState(null);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -166,9 +172,11 @@ export default function TopBar(props = {hideEventFilter:true}) {
 
     return (
         <div className={classes.grow}>
+            {props.hideEventFilter}
             <AppBar position="static">
                 <Toolbar>
-                    <div style={{padding:"5px",margin:"5px"}}>
+
+                    {props.hideEventFilter ? "" : <div style={{padding:"5px",margin:"5px"}}>
                         <div className={classes.search} style={{padding:"5px",margin:"5px", width:"100%"}}>
                             <div className={classes.searchIcon}>
                                 <SearchIcon />
@@ -179,8 +187,9 @@ export default function TopBar(props = {hideEventFilter:true}) {
                                     root: classes.inputRoot,
                                     input: classes.inputInput,
                                 }}
+                                value={eventFilter}
                                 inputProps={{ 'aria-label': 'search' }}
-                                onChange={event => dispatch(filterEventAction(event.target.value))}
+                                onChange={event => setEventFilter(event.target.value)}
 
                             />
 
@@ -188,8 +197,8 @@ export default function TopBar(props = {hideEventFilter:true}) {
                                 // style={{ padding: 0 }}
                                 edge="end"
                                 size="small"
-                                disabled={filter === ''}
-                                onClick={() => event => dispatch(filterEventAction(null))}
+                                disabled={eventFilter === ''}
+                                onClick={() => event => setEventFilter('')}
                             >
                                 <ClearIcon />
                             </IconButton>
@@ -219,7 +228,12 @@ export default function TopBar(props = {hideEventFilter:true}) {
                                 </IconButton>
                             </MuiPickersUtilsProvider>
                         </div>
-                    </div>
+                        <div style={{padding:"5px", margin:"5px", width:"100%"}}>
+                            <Button variant="contained" style={{width:"100%"}} color="primary" onClick={e=>{dispatch(filterEventAction(eventFilter,eventDate))}}>
+                                Filtrar
+                            </Button>
+                        </div>
+                    </div>}
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>
                         <IconButton

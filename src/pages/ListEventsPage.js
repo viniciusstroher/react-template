@@ -58,7 +58,11 @@ function ListEventsPage() {
         <>
             <TopBar hideEventFilter={false}/>
             {eventsFilter.length == 0 ?
-                <Paper elevation={3} style={{height:"50vh",textAlign:"center",verticalAlign: "middle", display:"table-cell",width: "100vw"}}>
+                <Paper elevation={3} style={{height:"50vh",
+                                            textAlign:"center",
+                                            verticalAlign: "middle",
+                                            display:"table-cell",
+                                            width: "100vw"}}>
                     Sem registros
                 </Paper>
             :

@@ -25,7 +25,8 @@ const initalEventsList = [{id:1, title:"Evento 1",author:"Girin", created_at:new
 
 const initialEvents = {events: [...initalEventsList],
                        eventsFilter: [...initalEventsList],
-                        filter:''}
+                        filter:'',
+                        date:null}
 
 export function eventsReducer(state = initialEvents, action) {
     switch (action.type) {
@@ -39,7 +40,10 @@ export function eventsReducer(state = initialEvents, action) {
             }else{
                 eventsFilter = state.events.filter(evt =>  evt.title.toLowerCase().indexOf(action.payload.filter.toLowerCase()) !== -1)
             }
-            return {...state, filter:action.payload.filter, eventsFilter }
+
+            //filtrar data
+
+            return {...state, filter:action.payload.filter, eventsFilter, date: action.payload.date}
         case EDIT_EVENT:
             return {...state, ...state.events,[action.payload.index]:action.payload.event}
         default:
